@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - User</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(49, 0, 88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* White Outer Box */
+        .box {
+            width: 50vw;
+            height: 600px;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Form spans full width of the padding allowed */
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Spacing between each input row block */
+        }
+
+        /* Row Container holding label and input vertically */
+        .user_inp {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* Spacing between label and its input box */
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        input[type="text"] {
+            height: 45px; /* Bigger height for professional look */
+            width: 100%;  /* Takes full width of the parent box */
+            background-color: rgb(255, 242, 242);
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 0 15px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* Submit Button Container */
+        .submit-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Submit Button Styling */
+        .sub {
+            height: 45px;
+            width: 150px;
+            background-color: rgb(49, 0, 88);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .sub:hover {
+            background-color: rgb(75, 0, 135);
+        }
+        @media (max-width : 1144px){
+            .box{
+                width: 75%;
+                height: auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <form action="END">
+            <div class="user_inp">
+                <label for="name">Enter your name</label>
+                <input type="text" id="name" placeholder="Name" autofocus required>
+            </div>
+            
+            <div class="user_inp">
+                <label for="city">Enter your city name</label>
+                <input type="text" id="city" placeholder="City" required>
+            </div>
+            
+            <div class="user_inp">
+                <label for="pincode">Enter your pin-code</label>
+                <input type="text" id="pincode" placeholder="Pin-Code" required>
+            </div>
+            
+            <div class="submit-container">
+                <input type="submit" value="Submit" class="sub">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
