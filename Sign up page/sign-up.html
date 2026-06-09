@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themescore - signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main_box">
+        <form method="POST" action="/submit">
+            <div class="user_input">
+                <label for="username">Enter Your Username</label>
+                <input type="text" id="username" placeholder="  Username" name="username" autofocus required>
+            </div>
+            <div class="user_input">
+                <label for="password">Enter Your Password</label>
+                <input type="password" id="password" placeholder="  Password" name="password" required>
+            </div>
+            <div class="user_input">
+                <label for="ConfirmPassword">Confirm Your Password</label>
+                <input type="password" id="ConfirmPassword" placeholder="  Confirm Password" name="Confirm_Password" required>
+            </div>
+            <div class="user_input">
+                <label for="email">Enter Your Email</label>
+                <input type="email" id="email" placeholder="  Email" name="email" required>
+            </div>
+            <div class="user_input">
+                <label for="dob">Enter Your Email</label>
+                <input type="date" id="dob" placeholder="  Date of Birth" name="dob" required>
+            </div>
+
+
+            <label for="male" class="label_gender">Select Your Gender</label>
+            <div class="gender">
+            <div>
+                <input type="radio" name="gender" id="male" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="others" value="others">
+                <label for="others">Others</label>
+            </div>
+            </div>
+
+            <div class="submition">
+                <input type="submit" value="Submit" class="sub">
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
