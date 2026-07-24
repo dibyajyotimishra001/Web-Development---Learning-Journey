@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(23, 23, 37);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    background-color: rgba(24, 33, 43, 0.96);
+    min-height: 500px;
+    width: 45vw;
+    border-radius: 50px 0 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+.box{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+    border-radius: 10px;
+    height: 35px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #f5f7fb;
+    outline: none;
+    width: 100%;
+}
+input[type="radio"],
+input[type="checkbox"]{
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+form > div:not(.box):not(.btn){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+form > div:not(.box):not(.btn) label{
+    vertical-align: middle;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.sub_btn{
+    background-color: rgb(255, 0, 81);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: auto;
+    min-height: 35px;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+div > h2{
+    color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 700px){
+    .container{
+        width: 80vw;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"]{
+        width: 90%;
+        height: 35px;
+    }
+}
+
+.gender {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    /* gap: 10px;                */
+    margin-top: 12px;
+}
+
+.gender-options {
+    display: flex;          
+    flex-direction: row;    
+    align-items: center;
+    gap: 4px;              
+}
