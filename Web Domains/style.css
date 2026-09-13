@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --LightBody: #fff;
+    --DarkBody: #040017fc;
+    --Content: #009d80fc;
+}
+body.dark{
+    --LightBody: #040017fc;
+    --DarkBody: #fff;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--LightBody);
+    color: var(--DarkBody);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    gap: 10px;
+}
+.bi-moon{
+    font-size: 25px;
+    color: var(--DarkBody);
+}
+input{
+    height: 55px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--DarkBody);
+    border-radius: 20px;
+    background-color: var(--LightBody);
+    color: var(--DarkBody);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.container{
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 100vw;
+}
+@media (max-width: 1456px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+@media (max-width: 900px){
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        width: 50vw;
+    }
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .card{
+        height: 80px;
+        width: 20px;
+    }
+}
+.card{
+    height: 150px;
+    width: 340px;
+    border-radius: 10px;
+    background-color: var(--Content);
+    color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    transition: 0.2s ease;
+}
+.card:hover{
+    height: 170px;
+    width: 360px;
+    transform: translate(-10px, -10px);
+}
+.foot{
+    height: 500px;
+    width: 100%;
+    background-color: #25004cfc;
+    color: white;
+    padding: 20px;
+}
+.foot > h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
