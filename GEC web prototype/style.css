@@ -16,6 +16,12 @@ body{
     color: var(--lightback);
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
+    transition: 0.2s ease-in-out;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header{
     height: 90px;
@@ -38,6 +44,60 @@ header{
     font-size: 22px;
     margin: 20px;
     color: white;
+    display: block;
+}
+/* Hamburger Menu */
+.humburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    gap: 8px;
+}
+.line{
+    height: 0.18rem;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+.line.active{
+    transform: rotateX('45');
+}
+nav{
+    min-height: 300px;
+    width: 100%;
+    background-color: rgb(92, 43, 226);
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid white;
+    z-index: -1;
+    position: absolute;
+    top: 90px;
+    transform: translateY(-200%);
+    transition: transform 0.2s ease-in;
+}
+nav.active{
+    z-index: 1;
+    transform: translateY(0);
+}
+nav ul li{
+    list-style: none;
+    display: inline-flex;
+    width: 90vw;
+}
+nav ul li a{
+    display: inline-flex;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+nav ul li a:hover{
+    border: 1px solid white;
 }
 .top{
     display: flex;

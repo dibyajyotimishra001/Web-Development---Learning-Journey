@@ -24,6 +24,15 @@ result.addEventListener("click", ()=>{
     }
 });
 
+// Hamburger menu
+const hamburger = document.querySelector(".humburger");
+const nav = document.getElementById("navlinks");
+const lines = document.getElementsByClassName("line");
+
+hamburger.addEventListener("click", function(){
+    nav.classList.toggle("active");
+});
+
 // Dark mode
 const moon = document.querySelector(".bi-moon");
 
