@@ -51,3 +51,42 @@ moon.addEventListener("click", ()=>{
         localStorage.setItem("theme", "disabled");
     }
 });
+
+// Search Box
+const searchBox = document.getElementById("serch-box");
+const cards = document.getElementsByClassName("card");
+const remove = document.querySelector(".bi-x-lg");
+
+remove.style.display = "none";
+
+searchBox.addEventListener("input", ()=>{
+    let query = searchBox.value.toLowerCase().trim();
+
+
+    for(let i = 0; i < cards.length; i++){
+        let cardText = cards[i].innerHTML.toLowerCase().trim();
+
+        if(cardText.includes(query)){
+            cards[i].style.display = "flex";
+        }
+        else{
+            cards[i].style.display = "none";
+        }
+        
+    }
+    remove.addEventListener("click", function(){
+        if(searchBox.value != ""){
+            searchBox.value = "";
+            for(let i = 0; i < cards.length; i++)
+                cards[i].style.display = "flex";
+            remove.style.display = "none";
+        }
+    });
+
+    if(searchBox.value != ""){
+        remove.style.display = "flex";
+    }
+    else{
+        remove.style.display = "none";
+    }
+});

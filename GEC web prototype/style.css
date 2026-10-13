@@ -128,6 +128,30 @@ nav ul li a:hover{
     align-items: center;
     border-radius: 10px;
 }
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.searchB{
+    width: 40%;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid var(--lightback);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#serch-box{
+    border: none;
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    background-color: transparent;
+    color: var(--lightback);
+}
 .section{
     display: flex;
     align-items: center;
@@ -180,10 +204,6 @@ nav ul li a:hover{
     margin: 20px;
     transition: 0.2s ease-in;
 }
-.card:hover{
-    height: 208px;
-    width: 208px;
-}
 a:has(.card), a {
     text-decoration: none;
     color: inherit;
@@ -196,6 +216,11 @@ a:has(.card), a {
     .show-box{
         width: 40%;
     }
+    .searchB{
+        width: 50%;
+        gap: 5px;
+    }
+
 }
 @media (max-width: 880px){
     .contents{
@@ -213,6 +238,12 @@ a:has(.card), a {
     .show-box{
         width: 40%;
     }
+    .searchB{
+        width: 70%;
+        gap: 5px;
+    }
+
+
 }
 @media (max-width: 547px){
     .top{
@@ -238,6 +269,11 @@ a:has(.card), a {
     .show-box{
         width: 40%;
     }
+    .searchB{
+        width: 70%;
+        gap: 5px;
+    }
+
 }
 footer{
     background-color: rgb(64, 46, 110);
