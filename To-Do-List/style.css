@@ -8,6 +8,10 @@ body{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+header{
+    margin: 20px;
+    font-size: 25px;
+}
 .input-box{
     height: 200px;
     width: 100%;
