@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background: #0B0F19;
+    --container: #161B26;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --input-back: #1F242F;
+    --input-border: #2D3545;
+    --input-border-active: #6366F1;
+    --btn: #6366F1;
+    --btn-hover: #4345ad;
+}
+body{
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.container{
+    background-color: var(--container);
+    width: 70%;
+    min-height: 500px;
+    border-radius: 30px;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+form{
+    width: 60%;
+    padding: 10px;
+}
+form > .form-inp{
+    display: flex;
+    flex-direction: column;
+}
+.inp{
+    width: 80%;
+    height: 45px;
+    border-radius: 15px;
+    padding: 8px;
+    outline: none;
+    border: var(--input-border);
+    background-color: var(--input-back);
+    color: white;
+    margin: 10px;
+}
+select {
+    word-wrap: normal;
+    background-color: var(--background);
+    width: 177px;
+    height: 29px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    margin-top: 10px;
+}
+.gender{
+    margin-top: 20px;
+}
+.sbt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sb-btn{
+    width: 90px;
+    height: 35px;
+    background-color: var(--btn);
+    color: var(--text-primary);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+}
+#sb-btn:hover{
+    background-color: var(--btn-hover);
+}
+@media (max-width: 998px){
+    .heading{
+        font-size: 18px;
+    }
+    form{
+        width: 80%;
+    }
+}
+@media (max-width: 750px){
+    .heading{
+        font-size: 14px;
+    }
+    .container{
+        width: 90%;
+    }
+    form{
+        width: 100%;
+    }
+}
