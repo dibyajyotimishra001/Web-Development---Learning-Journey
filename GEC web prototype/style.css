@@ -62,8 +62,18 @@ header{
     border-radius: 10px;
     transition: 0.3s ease-in;
 }
-.line.active{
-    transform: rotateX('45');
+/* Animation addded for navbar */
+.line1.active{
+    transform: rotate(45deg);
+}
+.line2.active{
+    display: none;
+}
+.line3.active{
+    transform: rotate(-45deg);
+}
+.humburger.active{
+    gap: 0;
 }
 nav{
     min-height: 300px;

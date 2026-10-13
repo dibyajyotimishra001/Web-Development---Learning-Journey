@@ -29,9 +29,21 @@ const hamburger = document.querySelector(".humburger");
 const nav = document.getElementById("navlinks");
 const lines = document.getElementsByClassName("line");
 
+// lines
+const line1 = document.querySelector(".line1")
+const line2 = document.querySelector(".line2")
+const line3 = document.querySelector(".line3")
+
 hamburger.addEventListener("click", function(){
     nav.classList.toggle("active");
+
+    // Hamburger Animation is added
+    line1.classList.toggle("active");
+    line2.classList.toggle("active");
+    line3.classList.toggle("active");
+    hamburger.classList.toggle("active");
 });
+
 
 // Dark mode
 const moon = document.querySelector(".bi-moon");
