@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --lightBackground: #fff;
+    --darkBackground: rgb(23, 23, 37);
+}
+body.darken{
+    --lightBackground: rgb(23, 23, 37);
+    --darkBackground: #fff;
+}
+body{
+    background-color: var(--lightBackground);
+    color: var(--darkBackground);
+    transition: 0.2s ease-in-out;
+}
+header{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(35, 0, 79);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s ease-in-out;
+}
+.headName{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.headName > p{
+    font-size: 30px;
+    font-weight: 700;
+}
+.line{
+    height: 0.17rem;
+    width: 60%;
+    background-color: white;
+    border-radius: 50px;
+}
+.hamburger.active{
+    gap: 0;
+}
+.line1.active{
+    transform: rotate(45deg);
+}
+.line2.active{
+    display: none;
+}
+.line3.active{
+    transform: rotate(-45deg);
+}
+.sidebar{
+    position: absolute;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(35, 0, 79);
+    color: white;
+    z-index: -1;
+    border-top: 1px white;
+    transform: translateX(-100%);
+    transition: 0.2s ease-in-out;
+    padding: 25px;
+}
+.sidebar.active{
+    transform: translateX(0);
+    z-index: 1;
+}
+.dark{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.bi-moon{
+    font-size: 16px;
+    color: white;
+}
+main{
+    padding: 10px;
+}
+.textEditor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#textarea{
+    color: var(--darkBackground);
+    border: 2px solid transparent;
+    background: linear-gradient(var(--lightBackground), var(--lightBackground)) padding-box,
+                linear-gradient(90deg, blue, purple, pink) border-box;
+    padding: 20px;
+    outline: none;
+    font-size: 16px;
+    width: 80%;
+    height: 50vh;
+    resize: none;
+    box-sizing: border-box;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 65px;
+}
+button{
+    width: 90px;
+    height: 35px;
+    background-color: rgb(172, 0, 77);
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+button:hover{
+    background-color: rgb(112, 1, 51);
+}
+@media(max-width: 662px){
+    .buttons{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .sidebar{
+        width: 40%;
+    }
+}
+@media(max-width: 562px){
+    .sidebar{
+        width: 45%;
+    }
+}
