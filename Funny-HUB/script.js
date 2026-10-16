@@ -56,3 +56,17 @@ weight.addEventListener("click", ()=>{
     fontweight = Math.min(fontweight + 100, 900);
     textContent.style.fontWeight = fontweight;
 });
+
+const colorBox = document.querySelector(".color-sec");
+const colours = document.getElementsByClassName("colour");
+
+color.addEventListener("click", ()=>{
+    colorBox.classList.toggle("active");
+
+});
+for(let i = 0; i < colours.length; i++){
+    colours[i].addEventListener("click", function(){
+        const textContent = document.getElementById("textarea");
+        textContent.style.color = getComputedStyle(colours[i]).backgroundColor;
+    });
+}
