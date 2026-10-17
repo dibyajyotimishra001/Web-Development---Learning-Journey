@@ -30,9 +30,13 @@ const cYear = localStorage.getItem("cyear");
 const course = localStorage.getItem("course");
 const gender = localStorage.getItem("gender");
 
+let space1 = uname.indexOf(" ");
+let fname = uname.slice(0, space1)
+
 names.classList.add('namesec');
 
-names.innerHTML = `<p style="font-size: 35px">Well done <p>\n<b>Name:</b> ${uname}\n<b>Completed Course:</b> ${course.toUpperCase()} Course\n<b>Joining Year:</b> ${jYear}\n<b>Completion Year:</b> ${cYear}`;
+names.innerHTML = `<p style="font-size: 55px"><b>Well done </b>${fname}, <p>\n<b>Name:</b> ${uname}\n<b>Completed Course:</b> ${course.toUpperCase()} Course\n<b>Batch:</b> ${jYear} - ${cYear}\n`;
+names.style.color = "white";
 
 names.style.whiteSpace = "pre-line";
 
